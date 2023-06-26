@@ -1,0 +1,21 @@
+img{
+    width: 20%;
+    height: auto;
+}
+
+table{
+    border-color: black;
+    border: 5px solid;
+}
+
+td{
+    border-color: black;
+    border: 5px solid;
+    vertical-align: baseline;
+}
+
+div.grid-item{
+    display: flex;
+    justify-content: center;
+    vertical-align: baseline;
+}
