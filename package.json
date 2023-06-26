@@ -4,6 +4,6 @@
     "masonry-layout": "^4.2.2"
   },
   "devDependencies": {
-    "@types/masonry-layout": "^4.2.5"
+    
   }
 }
