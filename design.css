@@ -25,32 +25,30 @@ div.container{
     
 }
 
-div#test{
-    background-color: blue;
+div.entry{
+    margin-bottom: 15px;
+    padding: 20px;
+    display: block;
 }
 
 div#entry_1{
     background-color: rgb(32, 255, 225);
 	border: 2px solid #0c0101;
-    display: inline-block;
 }
 
 div#entry_2{
     background-color: rgb(30, 187, 166);
 	border: 2px solid #0c0101;
-    display: inline-block;
 }
 
 div#entry_3{
     background-color: rgb(11, 105, 93);
 	border: 2px solid #0c0101;
-    display: inline-block;
 }
 
 div#entry_4{
     background-color: rgb(79, 165, 152);
 	border: 2px solid #0c0101;
-    display: inline-block;
 }
 
 div#entry_3 > p{
@@ -61,6 +59,13 @@ img#entryImg{
     width: 100%;
     height: auto;
     position: relative;
+    margin-bottom: 16px;
 }
 
+div#goodwillMoments_container{
+    background-color: black;
+    height: 400px;
+    width: 100%;
+    margin-bottom: 16px;
+}
 
