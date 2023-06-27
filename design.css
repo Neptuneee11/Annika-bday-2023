@@ -69,6 +69,13 @@ div#goodwillMoments_container{
     margin-bottom: 12px;
 }
 
+div#goodwillMoments_container_2{
+    background-color: black;
+    height: 250px;
+    width: 100%;
+    margin-bottom: 12px;
+}
+
 p.entryParagraph{
     text-align: justify;
 }
