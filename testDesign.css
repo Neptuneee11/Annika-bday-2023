@@ -1,0 +1,40 @@
+div.entry_1, div.entry_2, div.entry_3{
+    margin: 15px;
+    padding: 20px;
+}
+
+div.entry_1{
+    background-color: #D14D72;
+}
+
+div.entry_2{
+    background-color: #FFABAB;
+}
+
+div.entry_3{
+    background-color: #FCC8D1;
+}
+
+div.entry_4{
+    background-color: #FEF2F4;
+}
+
+div.modal-content{
+    padding: 40px;
+}
+
+img{
+    width: 100%;
+    height: auto;
+    border-radius: 15px;
+}
+
+p.entryParagraph{
+    text-align: justify;
+    text-decoration: none;
+}
+
+a.fillDiv{
+    text-decoration: none;
+    color: black;
+}

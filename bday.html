@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
         
         <link rel="stylesheet" href="design.css">
@@ -15,20 +15,25 @@
 
     <body>
         <div class="titleContainer">
-            <div class="HBD">
-                <h1> Happy Birthday Annika! </h1>
+            <div id="balloon-container">
             </div>
-            <div class="scrollDown">
-                <p> Scroll Down </p>
+            <div class="HBD">
+                <p id="HBD"> Happy Birthday Annika! </h1>
+                    <div class="scrollDown">
+                        <p id="scrollDown"> Scroll Down </p>
+                        <img src="designAssets/gif1.gif" width="150px" heigth="auto" alt="transparent gif babyyyy" title="transparent gif babyyyy">
+                    </div>
             </div>
         </div>
         <div class="timeLine">
             <div class="beforeAteneo">
-                <p id="timelineTitle"> Before Ateneo </p>
+                <div id="timelineTitle">
+                    <p id="timelineTitle"> Before Ateneo </p>
+                </div>
                 <div class="container overflow-hidden">
-                    <div class="row gy-15">
+                    <div class="row gy-15" name="color" >
                         <div class="col-3"> <!-- column 1-->
-                            <div class="entry" id="entry_1">
+                            <div name="entry" class="entry_1" id="">
                                 <div class="d-flex align-items-center" id="goodwillMoments_container">
                                     <!--Copy pasted some sample carousel code lmao-->
                                     <div id="goodwillMoments_1" class="carousel slide" data-bs-interval="false" align="center">
@@ -66,7 +71,27 @@
                                     sayo (salamat OAA). Was this the one that kickstarted our Goodwill meetings? Maybe. Good thing our meeting spot is close to your home; We can walk there.
                                 </p>
                             </div>
-                            <div class="entry" id="entry_2">
+                            
+                        </div>
+                        <div class="col-3"> <!-- column 2-->
+                            
+                        </div>
+                        <div class="col-3"> <!-- column 3-->
+                            
+                        </div>
+                        <div class="col-3"> <!-- column 4-->
+                            
+						</div>
+                    </div> 
+                </div>
+            </div>
+            
+            <div class="ateneoFirstSem">
+                <p id="timelineTitle"> 2022 First Semester </p>
+				<div class="container overflow-hidden">
+					<div class="row gy-15" name="color">
+						<div class="col-3"> <!-- column 1-->
+							<div class="entry" id="entry_2">
                                 <div class="d-flex align-items-center" id="goodwillMoments_container_2">
                                     <!--Copy pasted some sample carousel code lmao-->
                                     <div id="karaokeMoments_1" class="carousel slide" data-bs-interval="false" align="center">
@@ -86,13 +111,13 @@
                                                 <div class="d-flex align-items-center"> 
                                                     <img src="pics/AfterKaraoke.jpg" class="d-flex align-items-center w-100" alt="Annika and Me, wala nang boses" title="Annika and Me, wala nang boses">
                                                 </div>
+											</div>
                                         </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#karaokeMoments_1" data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#karaokeMoments_1" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Previous</span>
                                         </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#karaokeMoments_1" data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#karaokeMoments_1" data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Next</span>
                                         </button>
@@ -121,81 +146,24 @@
                                 <p class="entryParagraph"> Siopao
                                 </p>
                             </div>
-                            <div class="entry" id="entry_4">
-                                <img id="entryImg" src="pics/RiverBanks.jpg" alt="actually a river bank" title="actually a river bank"></img>
-                                <p class="entryParagraphHead"> <b> An evening at Riverbanks </b> </p>
-                                <p class="entryParagraph"> A trip down memory lane isn't just the happy moments. We had conflicts that hurt us both. I feel like this one's important bcs it alleviated some tension between us. 
-                                    I'm glad this wasn't a friendship-ender between us. Many lessons were learned during this evening.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_3">
-                                <img id="entryImg" src="pics/ShawarmaSaRiverBanks.jpg" alt="Masinsinang usapan" title="Masinsinang usapan">
-                                <p class="entryParagraphHead"> <b> Shawarma makes me remember this moment </b> </p>
-                                <p class="entryParagraph"> Mahirap magkaroon ng ganitong usapan pag walang laman ang tiyan. Secrets poured out on this particular evening. Secrets that hurt to say. 
-                                    Secrets that burdened the one holding it. I'm glad we shared it with each other before it grew into something too big for us to handle. I'm glad you're still 
-                                    here after everything.
-                                </p>
-                            </div>
                             <div class="entry" id="entry_1">
-                                <img id="entryImg" src="pics/SoloPic_8.jpg" alt="doubting stare" title="press x to doubt">
-                                <p class="entryParagraphHead"> <b> Dinner before watching Suzume no Tojimari </b> </p>
-                                <p class="entryParagraph"> Why are you looking at me like that? I'm not lying, I swear. You're looking like you know something I don't.
+                                <img id="entryImg" src="pics/IntoTheFishCatchers.jpg" alt="Almanac cover page maybe" title="Almanac cover page maybe"></img>
+                                <p class="entryParagraphHead"> <b> National museum solo picture </b> </p>
+                                <p class="entryParagraph"> There's something cool about this pic where you're just walking into the fish catchers. It's like they 
+                                    summoned you or you got attracted to them. I dunno I just found this cool.
                                 </p>
                             </div>
-                            <div class="entry" id="entry_3">
-                                <img id="entryImg" src="pics/GoodwillChill.jpg" alt="a cool pic" title="tried composition">
-                                <p class="entryParagraphHead"> <b> Cool pic I have of you </b> </p>
-                                <p class="entryParagraph"> Add this to the things to frame.
+							<div class="entry" id="entry_3">
+                                <img id="entryImg" src="pics/SoloPic_6.jpg" alt="KFC lunch with you" title="KFC lunch with you">
+                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. III </b> </p>
+                                <p class="entryParagraph"> Another pic of you eating at KFC. Didn't know noodles were your go to meal there. Ang funny lang may unintentional photobomb HAHAHAHA. 
+                                    Uy salamat sa libre ah. I totally did not expect the pedicab price.
                                 </p>
                             </div>
-                            <div class="entry" id="entry_1">
-                                <img id="entryImg" src="pics/SoloPic_9.jpg" alt="BonChon with you" title="BonChon with you">
-                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. V </b> </p>
-                                <p class="entryParagraph"> Hydration is a good thing. 
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_2">
-                                <div class="d-flex align-items-center" id="goodwillMoments_container_2">
-                                    <div id="firstGala" class="carousel slide" data-bs-interval="false" align="center">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#firstGala" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#firstGala" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="pics/TapatNgPisayFSR_1.jpg" class="d-block w-100" alt="in front of pisay" title="in front of pisay">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/TapatNgPisayFSR_2.jpg" class="d-block w-100" alt="in front of pisay 2" title="in front of pisay 2">
-                                            </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#firstGala" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#firstGala" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p class="entryParagraphHead"> <b> First gala after quarantine </b> </p>
-                                <p class="entryParagraph"> I have no idea why you said yes to walk to my high school with no hesitation. What I did figure out is that you have a sense of 
-                                    adventure. I do remember the wind being fresh and we had a trip down memory lane. Sarado pa hypermarket nun so walang turon. it's really nice we set time for each other 
-                                    in the morning then we go to our appointments in the afternoon.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_4">
-                                <img id="entryImg" src="pics/SoloPic_1.jpg" alt="first turon together" title="first turon together">
-                                <p class="entryParagraphHead"> <b> You're as beautiful as the day I lost you.jpg </b> </p>
-                                <p class="entryParagraph"> First time in a while on what's gonna be our checkpoint pauwi galing Ateneo. This moment wasn't perfect for you and me. Regardless, I included this because 
-                                    It's our first major trip together; Kahit saglit lang. It was a great start.
-                                </p>
-                            </div>
-                        </div>
-                        <div class="col-3"> <!-- column 2-->
-                            <div class="entry" id="entry_2">
-                                <img id="entryImg" src="pics/SoloPic_4.jpg" alt="RandomSelfie" title="RandomSelfie">
+						</div>
+						<div class="col-3"> <!-- column 2-->
+							<div class="entry" id="entry_2">
+                                <a href="pics/SoloPic_4.jpg" target="_blank"><img id="entryImg" src="pics/SoloPic_4.jpg" alt="RandomSelfie" title="RandomSelfie"></a>
                                 <p class="entryParagraphHead"> <b> First time magkita sa Ateneo </b> </p>
                                 <p class="entryParagraph"> Think of this not as a trip down memory lane but more of a highlight reel. Andami na palang nagbago sayo but you still kept your 
                                     charm. You've become more decisive and less of a pushover. 
@@ -213,14 +181,7 @@
                                 <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you </b> </p>
                                 <p class="entryParagraph"> You look great. Be proud of yourself. This is one of many.
                                 </p>
-                            </div>
-                            <div class="entry" id="entry_1">
-                                <img id="entryImg" src="pics/IntoTheFishCatchers.jpg" alt="Almanac cover page maybe" title="Almanac cover page maybe"></img>
-                                <p class="entryParagraphHead"> <b> National museum solo picture </b> </p>
-                                <p class="entryParagraph"> There's something cool about this pic where you're just walking into the fish catchers. It's like they 
-                                    summoned you or you got attracted to them. I dunno I just found this cool.
-                                </p>
-                            </div>
+                            </div>      
                             <div class="entry" id="entry_2">
                                 <div class="d-flex align-items-center" id="goodwillMoments_container">
                                     <!--Copy pasted some sample carousel code lmao-->
@@ -251,7 +212,218 @@
                                 <p class="entryParagraph"> Another pair of pics you need to get framed. Love how your suit matches the floor and the fence. Lagay mo to sa bahay.
                                 </p>
                             </div>
+							<div class="entry" id="entry_1">
+                                <div class="d-flex align-items-center" id="goodwillMoments_container">
+                                    <!--Copy pasted some sample carousel code lmao-->
+                                    <div id="nationalMuseumMoments" class="carousel slide" data-bs-interval="false" align="center">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/AnotherMuseum_1.jpg" class="d-block w-100" alt="Annika pic sa harap ng museum of natural history" title="Annika pic sa harap ng museum of natural history">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/AnotherMuseum_2.jpg" class="d-block w-100" alt="Annika pic sa harap ng museum of natural history 2" title="Annika pic sa harap ng museum of natural history 2">
+                                            </div>
+                                        </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="entryParagraphHead"> <b> National Museum of Natural history </b> </p>
+                                <p class="entryParagraph"> Get this pic framed. I think it will make you happy passing by it every now and then.
+                                </p>
+                            </div>
+                            
+						</div>
+						<div class="col-3"> <!-- column 3-->
+							<div class="entry" id="entry_3">
+                                <img id="entryImg" src="pics/Gonz_1.jpg" alt="Lunch" title="Lunch">
+                                <p class="entryParagraphHead"> <b> Back when Gonz had barriers </b> </p>
+                                <p class="entryParagraph"> Bawal magtabi pero pwede mag-usap. Pretty cool na nagagawa mong magdala ng baunan papasok.</p>
+                            </div>
                             <div class="entry" id="entry_1">
+                                <div class="d-flex align-items-center" id="goodwillMoments_container_2">
+                                    <!--Copy pasted some sample carousel code lmao-->
+                                    <div id="recWeekMoments" class="carousel slide" data-bs-interval="false" align="center">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#recWeekMoments" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#recWeekMoments" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/recWeekSolo.jpg" class="d-block w-100" alt="Recweek sign with Annika" title="Recweek sign with Annika">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/recWeekDuo.jpg" class="d-block w-100" alt="Dalawa tayo sa harap ng recweek" title="Dalawa tayo sa harap ng recweek">
+                                            </div>
+                                        </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#recWeekMoments" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#recWeekMoments" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="entryParagraphHead"> <b> Recweek </b> </p>
+                                <p class="entryParagraph"> Kala ko orgmate pero inactive pala HAHAHA. Who knew late na pala tayo makakauwi. Bawi nalang sa service hours nang sabay. 
+
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_4">
+                                <img id="entryImg" src="pics/dinner_1.jpg" alt="Dinner with you" title="Dinner with you"></img>
+                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you part II</b> </p>
+                                <p class="entryParagraph"> I thought you were the type to eat unli rice. Ako lang pala lmao.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_3">
+                                <img id="entryImg" src="pics/AnnikaPondering_1.jpg" alt="nakatalikod.jpg" title="nakatalikod.jpg">
+                                <p class="entryParagraphHead"> <b> National Museum moments </b> </p>
+                                <p class="entryParagraph"> Another candid photo hehehe.
+                                </p>
+                            </div>
+							<div class="entry" id="entry_1">
+                                <div class="d-flex align-items-center" id="goodwillMoments_container">
+                                    <div id="nationalMuseumMoments_duo" class="carousel slide" data-bs-interval="false" align="center">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="7" aria-label="Slide 8"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/proofWeWereHere.jpg" class="d-block w-100" alt="duo pic namin sa harap ng museum" title="duo pic namin sa harap ng museum">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/pots.jpg" class="d-block w-100" alt="Us checking out pots" title="Us checking out pots">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/MuslimSection.jpg" class="d-block w-100" alt="Forgot which section of the museum was this" title="Forgot which section of the museum was this">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/weMadeABird_idk.jpg" class="d-block w-100" alt="symmetrical pose" title="symmetrical pose">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/ElevatorPic_whyNot.jpg" class="d-block w-100" alt="picture sa elevator against the light" title="picture sa elevator against the light">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/coolCeiling_1.jpg" class="d-block w-100" alt="under museum of natural history" title="under museum of natural history">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/coolCeiling_2.jpg" class="d-block w-100" alt="under museum of natural history 2" title="under museum of natural history 2">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/AgainstTheLight_sana.jpg" class="d-block w-100" alt="two of us and one visible butterfly" title="two of us and one visible butterfly">
+                                            </div>
+                                        </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="entryParagraphHead"> <b> Ang favorite kong kasama </b> </p>
+                                <p class="entryParagraph"> As promised, eto yung mga pics na magkasama tayo. Thank you for making the trip many times better than it should be. Thank you for being someone 
+                                    I can talk to while pondering over the things at the museum.
+                                </p>
+                            </div>
+                           
+						</div>
+						<div class="col-3"> <!--column 4-->
+							<div class="entry" id="entry_2">
+                                <img id="entryImg" src="pics/I forgot saan to.jpg" alt="No clue even in the source code" title="no idea">
+                                <p class="entryParagraphHead"> <b> Where was this taken? </b> </p>
+                                <p class="entryParagraph"> For real I don't know where those red chairs came from. Definitely not the bus.</p>
+                            </div>
+                            <div class="entry" id="entry_4">
+                                <img id="entryImg" src="pics/BusyPoSiya.jpg" alt="Me when math" title="Me when math">
+                                <p class="entryParagraphHead"> <b> Responsible Queen </b> </p>
+                                <p class="entryParagraph"> Inspiration ko talaga sayo yung study habits mo. It takes me back to when you were the quiet kid who liked to read. I'm proud of you 
+                                    for surviving this brutal course of Math for finance. <u> Don't give up! </u>
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_1">
+                                <img id="entryImg" src="pics/AceHardwareLightingTest.jpg" alt="Cutie by the lights" title="Cutie by the lights">
+                                <p class="entryParagraphHead"> <b> Ace Hardware lights section </b> </p>
+                                <p class="entryParagraph"> I always find ourselves hanging out in the most unlikely of places. Well it was my idea back then and you just said yes without judgement. 
+                                    <u> You're an incredible listener.</u> I say that because you somehow managed to listen to me ramble about the stuff we found there for an hour.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_4">
+                                <img id="entryImg" src="pics/SoloPeroHindi.jpg" alt="kunwari magkatabi tayo" title="kunwari magkatabi tayo">
+                                <p class="entryParagraphHead"> <b> Totally intentional </b> </p>
+                                <p class="entryParagraph"> It focused on me instead of the fishes. Cute ng pose mo. 
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_2">
+                                <img id="entryImg" src="pics/AnnikaTheExplorer.jpg" alt="in front of the mountains and forests" title="in front of the mountains and forests">
+                                <p class="entryParagraphHead"> <b> Charaan! </b> </p>
+                                <p class="entryParagraph"> Kunwari nag hiking tayo. Maybe that's what it would've looked like.
+                                </p>
+                            </div>
+                            
+                            
+						</div>
+					</div>
+				</div>
+            </div>
+			
+            <div class="nextYear2023">
+                <p id="timelineTitle"> 2023 Second Semester </p>
+				<div class="container overflow-hidden">
+					<div class="row gy-15" name="color">
+						<div class="col-3"><!--column 1-->
+							<div class="entry" id="entry_4">
+                                <img id="entryImg" src="pics/RiverBanks.jpg" alt="actually a river bank" title="actually a river bank"></img>
+                                <p class="entryParagraphHead"> <b> An evening at Riverbanks </b> </p>
+                                <p class="entryParagraph"> A trip down memory lane isn't just the happy moments. We had conflicts that hurt us both. I feel like this one's important bcs it alleviated some tension between us. 
+                                    I'm glad this wasn't a friendship-ender between us. Many lessons were learned during this evening.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_3">
+                                <img id="entryImg" src="pics/ShawarmaSaRiverBanks.jpg" alt="Masinsinang usapan" title="Masinsinang usapan">
+                                <p class="entryParagraphHead"> <b> Shawarma makes me remember this moment </b> </p>
+                                <p class="entryParagraph"> Mahirap magkaroon ng ganitong usapan pag walang laman ang tiyan. Secrets poured out on this particular evening. Secrets that hurt to say. 
+                                    Secrets that burdened the one holding it. I'm glad we shared it with each other before it grew into something too big for us to handle. I'm glad you're still 
+                                    here after everything.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_1">
+                                <img id="entryImg" src="pics/SoloPic_8.jpg" alt="doubting stare" title="press x to doubt">
+                                <p class="entryParagraphHead"> <b> Dinner before watching Suzume no Tojimari </b> </p>
+                                <p class="entryParagraph"> Why are you looking at me like that? I'm not lying, I swear. You're looking like you know something I don't.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_3">
+                                <img id="entryImg" src="pics/GoodwillChill.jpg" alt="a cool pic" title="tried composition">
+                                <p class="entryParagraphHead"> <b> Cool pic I have of you </b> </p>
+                                <p class="entryParagraph"> Add this to the things to frame.
+                                </p>
+                            </div>
+                            
+						</div>
+						<div class="col-3"><!--column 2-->
+							<div class="entry" id="entry_1">
                                 <div class="d-flex align-items-center" id="goodwillMoments_container">
                                     <div id="riverBanksMoments_duo" class="carousel slide" data-bs-interval="false" align="center">
                                         <div class="carousel-indicators">
@@ -311,7 +483,155 @@
                                     where we reconnected. You're a precious friend to me Annika. Magkalapit tayo, geographically and metaphorically, and I would do everything to keep it like so (mostly the latter, di ko kontrolado yung nauna).
                                 </p>
                             </div>
+                           
+						</div>
+						<div class="col-3"><!--column 3-->
+							 <div class="entry" id="entry_2">
+                                <img id="entryImg" src="pics/RedShirt.jpg" alt="Red shirt" title="Red shirt"></img>
+                                <p class="entryParagraphHead"> <b> Red really looks good on you </b> </p>
+                                <p class="entryParagraph"> I forgot where this was taken. Maybe mas naaalala ko to because of the color red. Actually, not just that shirt. 
+                                    Anything you wear with a dominant red makes me remember it better than others. Maybe I just like bright colors and not everybody does that. 
+                                    There's gonna be another pic with you on another fit with a lighter shade of red. Look out for that.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_2">
+                                <div class="d-flex align-items-center" id="goodwillMoments_container">
+                                    <div id="mirrorPics" class="carousel slide" data-bs-interval="false" align="center">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#mirrorPics" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#mirrorPics" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/MagkatabiSaHarap.jpg" class="d-block w-100" alt="most comfortable seat" title="most comfortable seat">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/ThereWasAnAttemptMagCandid.jpg" class="d-block w-100" alt="akala mo namimili HAHAHA" title="akala mo namimili HAHAHA">
+                                            </div>
+                                        </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#mirrorPics" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#mirrorPics" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="entryParagraphHead"> <b> Mirror pics natin </b> </p>
+                                <p class="entryParagraph"> Kulang nalang yung malaking salamin sa Landmark sa likod ng Trinoma. Mas kita yung setting natin pag sa salamin sa totoo lang.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_4">
+                                <img id="entryImg" src="pics/LyingOnGrass.jpg" alt="we touched grass" title="we touched grass">
+                                <p class="entryParagraphHead"> <b> Oh hey it's ya boi Troy </b> </p>
+                                <p class="entryParagraph"> I'm glad you found a new friend that follows you around. Makes the college experience a lot less lonely ya know? It's pretty cool he's a 
+                                    competitive dancer.
+                                </p>
+                            </div>
+							
+						</div>
+						<div class="col-3"><!--column 4-->
+							<div class="entry" id="entry_2">
+                                <img id="entryImg" src="pics/SoloPic_7.jpg" alt="merienda sa foodcourt" title="merienda sa foodcourt">
+                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. IV </b> </p>
+                                <p class="entryParagraph"> SM North foodcourt potato corner is a disappointment. Also ka-stress ka, iniiwan mo lang bag mo sa 
+                                    public area. May laman pang laptop.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_3">
+                                <div class="d-flex align-items-center" id="goodwillMoments_container_2">
+                                    <div id="roseColored" class="carousel slide" data-bs-interval="false" align="center">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#roseColored" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#roseColored" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/switchedToToteBag_1.jpg" class="d-block w-100" alt="a solution to back pain" title="a solution to back pain">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/switchedToToteBag_2.jpg" class="d-block w-100" alt="a solution to back pain 2" title="a solution to back pain 2">
+                                            </div>
+                                        </div>
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#roseColored" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                        <button class="carousel-control-next" type="button" data-bs-target="#roseColored" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+								<p class="entryParagraphHead"> <b> A solution to back pain </b> </p>
+								<p class="entryParagraph"> Hope you get to fix your shoulder and back issues. I'm just relieved you're not ignoring it anymore. Hopefully you don't have to bring your laptop 
+									everyday.
+								</p>
+                            </div>
                             <div class="entry" id="entry_1">
+                                <img id="entryImg" src="pics/AfterLumabasNgFair.jpg" alt="a disappointed look" title="a disappointed look">
+                                <p class="entryParagraphHead"> <b> Naluging palaka </b> </p>
+                                <p class="entryParagraph"> Hey at least you got to hang out with Troy kahit wala kayo masyadong nagawa sa SHS fair. </p>
+                            </div>
+                           
+						</div>
+					</div>
+				</div>
+            </div>
+            <div class="intersessionToPresent">
+                <p id="timelineTitle"> 2023 up until today </p>
+				<div class="container overflow-hidden">
+					<div class="row gy-15" name="color">
+						<div class="col-3"><!--column 1-->
+							<div class="entry" id="entry_1">
+                                <img id="entryImg" src="pics/SoloPic_9.jpg" alt="BonChon with you" title="BonChon with you">
+                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. V </b> </p>
+                                <p class="entryParagraph"> Hydration is a good thing. 
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_2">
+                                <div class="d-flex align-items-center" id="goodwillMoments_container_2">
+                                    <div id="firstGala" class="carousel slide" data-bs-interval="false" align="center">
+                                        <div class="carousel-indicators">
+                                            <button type="button" data-bs-target="#firstGala" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                                            <button type="button" data-bs-target="#firstGala" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                                        </div>
+                                        <div class="carousel-inner">
+                                            <div class="carousel-item active">
+                                                <img src="pics/TapatNgPisayFSR_1.jpg" class="d-block w-100" alt="in front of pisay" title="in front of pisay">
+                                            </div>
+                                            <div class="carousel-item">
+                                                <img src="pics/TapatNgPisayFSR_2.jpg" class="d-block w-100" alt="in front of pisay 2" title="in front of pisay 2">
+                                            </div>
+                                        </div>
+                                            <button class="carousel-control-prev" type="button" data-bs-target="#firstGala" data-bs-slide="prev">
+                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Previous</span>
+                                        </button>
+                                            <button class="carousel-control-next" type="button" data-bs-target="#firstGala" data-bs-slide="next">
+                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                            <span class="visually-hidden">Next</span>
+                                        </button>
+                                    </div>
+                                </div>
+                                <p class="entryParagraphHead"> <b> First gala after quarantine </b> </p>
+                                <p class="entryParagraph"> I have no idea why you said yes to walk to my high school with no hesitation. What I did figure out is that you have a sense of 
+                                    adventure. I do remember the wind being fresh and we had a trip down memory lane. Sarado pa hypermarket nun so walang turon. it's really nice we set time for each other 
+                                    in the morning then we go to our appointments in the afternoon.
+                                </p>
+                            </div>
+                            <div class="entry" id="entry_4">
+                                <img id="entryImg" src="pics/SoloPic_1.jpg" alt="first turon together" title="first turon together">
+                                <p class="entryParagraphHead"> <b> You're as beautiful as the day I lost you.jpg </b> </p>
+                                <p class="entryParagraph"> First time in a while on what's gonna be our checkpoint pauwi galing Ateneo. This moment wasn't perfect for you and me. Regardless, I included this because 
+                                    It's our first major trip together; Kahit saglit lang. It was a great start.
+                                </p>
+                            </div>
+						</div>
+						<div class="col-3"><!--column 2-->
+							 <div class="entry" id="entry_1">
                                 <img id="entryImg" src="pics/HinatakAkoSaSM.jpg" alt="Your best fit I've seen" title="Your best fit I've seen">
                                 <p class="entryParagraphHead"> <b> Ikaw naman nag-aya this time </b> </p>
                                 <p class="entryParagraph"> Told you you've grown more assertive. I'm proud of you for that and I really don't know how to tell you that I appreciate it very much when you do that. 
@@ -386,137 +706,8 @@
                                     I'm really happy you're comfortable enough to show me your malambing side. I will treasure it for a long time.
                                 </p>
 							</div>
-                        </div>
-                        <div class="col-3"> <!-- column 3-->
-                            <div class="entry" id="entry_3">
-                                <img id="entryImg" src="pics/Gonz_1.jpg" alt="Lunch" title="Lunch">
-                                <p class="entryParagraphHead"> <b> Back when Gonz had barriers </b> </p>
-                                <p class="entryParagraph"> Bawal magtabi pero pwede mag-usap. Pretty cool na nagagawa mong magdala ng baunan papasok.</p>
-                            </div>
-                            <div class="entry" id="entry_1">
-                                <div class="d-flex align-items-center" id="goodwillMoments_container_2">
-                                    <!--Copy pasted some sample carousel code lmao-->
-                                    <div id="recWeekMoments" class="carousel slide" data-bs-interval="false" align="center">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#recWeekMoments" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#recWeekMoments" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="pics/recWeekSolo.jpg" class="d-block w-100" alt="Recweek sign with Annika" title="Recweek sign with Annika">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/recWeekDuo.jpg" class="d-block w-100" alt="Dalawa tayo sa harap ng recweek" title="Dalawa tayo sa harap ng recweek">
-                                            </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#recWeekMoments" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#recWeekMoments" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p class="entryParagraphHead"> <b> Recweek </b> </p>
-                                <p class="entryParagraph"> Kala ko orgmate pero inactive pala HAHAHA. Who knew late na pala tayo makakauwi. Bawi nalang sa service hours nang sabay. 
-
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_4">
-                                <img id="entryImg" src="pics/dinner_1.jpg" alt="Dinner with you" title="Dinner with you"></img>
-                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you part II</b> </p>
-                                <p class="entryParagraph"> I thought you were the type to eat unli rice. Ako lang pala lmao.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_3">
-                                <img id="entryImg" src="pics/AnnikaPondering_1.jpg" alt="nakatalikod.jpg" title="nakatalikod.jpg">
-                                <p class="entryParagraphHead"> <b> National Museum moments </b> </p>
-                                <p class="entryParagraph"> Another candid photo hehehe.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_3">
-                                <img id="entryImg" src="pics/SoloPic_6.jpg" alt="KFC lunch with you" title="KFC lunch with you">
-                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. III </b> </p>
-                                <p class="entryParagraph"> Another pic of you eating at KFC. Didn't know noodles were your go to meal there. Ang funny lang may unintentional photobomb HAHAHAHA. 
-                                    Uy salamat sa libre ah. I totally did not expect the pedicab price.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_1">
-                                <div class="d-flex align-items-center" id="goodwillMoments_container">
-                                    <!--Copy pasted some sample carousel code lmao-->
-                                    <div id="nationalMuseumMoments" class="carousel slide" data-bs-interval="false" align="center">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="pics/AnotherMuseum_1.jpg" class="d-block w-100" alt="Annika pic sa harap ng museum of natural history" title="Annika pic sa harap ng museum of natural history">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/AnotherMuseum_2.jpg" class="d-block w-100" alt="Annika pic sa harap ng museum of natural history 2" title="Annika pic sa harap ng museum of natural history 2">
-                                            </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#nationalMuseumMoments" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p class="entryParagraphHead"> <b> National Museum of Natural history </b> </p>
-                                <p class="entryParagraph"> Get this pic framed. I think it will make you happy passing by it every now and then.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_2">
-                                <img id="entryImg" src="pics/RedShirt.jpg" alt="Red shirt" title="Red shirt"></img>
-                                <p class="entryParagraphHead"> <b> Red really looks good on you </b> </p>
-                                <p class="entryParagraph"> I forgot where this was taken. Maybe mas naaalala ko to because of the color red. Actually, not just that shirt. 
-                                    Anything you wear with a dominant red makes me remember it better than others. Maybe I just like bright colors and not everybody does that. 
-                                    There's gonna be another pic with you on another fit with a lighter shade of red. Look out for that.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_2">
-                                <div class="d-flex align-items-center" id="goodwillMoments_container">
-                                    <div id="mirrorPics" class="carousel slide" data-bs-interval="false" align="center">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#mirrorPics" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#mirrorPics" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="pics/MagkatabiSaHarap.jpg" class="d-block w-100" alt="most comfortable seat" title="most comfortable seat">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/ThereWasAnAttemptMagCandid.jpg" class="d-block w-100" alt="akala mo namimili HAHAHA" title="akala mo namimili HAHAHA">
-                                            </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#mirrorPics" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#mirrorPics" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p class="entryParagraphHead"> <b> Mirror pics natin </b> </p>
-                                <p class="entryParagraph"> Kulang nalang yung malaking salamin sa Landmark sa likod ng Trinoma. Mas kita yung setting natin pag sa salamin sa totoo lang.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_4">
-                                <img id="entryImg" src="pics/LyingOnGrass.jpg" alt="we touched grass" title="we touched grass">
-                                <p class="entryParagraphHead"> <b> Oh hey it's ya boi Troy </b> </p>
-                                <p class="entryParagraph"> I'm glad you found a new friend that follows you around. Makes the college experience a lot less lonely ya know? It's pretty cool he's a 
-                                    competitive dancer.
-                                </p>
-                            </div>
+						</div>
+						<div class="col-3"><!--column 3-->
 							<div class="entry" id="entry_3">
                                 <img id="entryImg" src="pics/SoloPic_10.jpg" alt="cafe evening Uyy naka milktea siya" title="cafe evening Uyy naka milktea siya">
                                 <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. VI </b> </p>
@@ -530,136 +721,9 @@
                                 <p class="entryParagraph"> You've seen my feet. You can't leave me anymore.
                                 </p>
                             </div>
-                        </div>
-                        <div class="col-3"> <!-- column 4-->
-                            <div class="entry" id="entry_2">
-                                <img id="entryImg" src="pics/I forgot saan to.jpg" alt="No clue even in the source code" title="no idea">
-                                <p class="entryParagraphHead"> <b> Where was this taken? </b> </p>
-                                <p class="entryParagraph"> For real I don't know where those red chairs came from. Definitely not the bus.</p>
-                            </div>
-                            <div class="entry" id="entry_4">
-                                <img id="entryImg" src="pics/BusyPoSiya.jpg" alt="Me when math" title="Me when math">
-                                <p class="entryParagraphHead"> <b> Responsible Queen </b> </p>
-                                <p class="entryParagraph"> Inspiration ko talaga sayo yung study habits mo. It takes me back to when you were the quiet kid who liked to read. I'm proud of you 
-                                    for surviving this brutal course of Math for finance. <u> Don't give up! </u>
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_1">
-                                <img id="entryImg" src="pics/AceHardwareLightingTest.jpg" alt="Cutie by the lights" title="Cutie by the lights">
-                                <p class="entryParagraphHead"> <b> Ace Hardware lights section </b> </p>
-                                <p class="entryParagraph"> I always find ourselves hanging out in the most unlikely of places. Well it was my idea back then and you just said yes without judgement. 
-                                    <u> You're an incredible listener.</u> I say that because you somehow managed to listen to me ramble about the stuff we found there for an hour.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_4">
-                                <img id="entryImg" src="pics/SoloPeroHindi.jpg" alt="kunwari magkatabi tayo" title="kunwari magkatabi tayo">
-                                <p class="entryParagraphHead"> <b> Totally intentional </b> </p>
-                                <p class="entryParagraph"> It focused on me instead of the fishes. Cute ng pose mo. 
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_2">
-                                <img id="entryImg" src="pics/AnnikaTheExplorer.jpg" alt="in front of the mountains and forests" title="in front of the mountains and forests">
-                                <p class="entryParagraphHead"> <b> Charaan! </b> </p>
-                                <p class="entryParagraph"> Kunwari nag hiking tayo. Maybe that's what it would've looked like.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_1">
-                                <div class="d-flex align-items-center" id="goodwillMoments_container">
-                                    <div id="nationalMuseumMoments_duo" class="carousel slide" data-bs-interval="false" align="center">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                                            <button type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="pics/proofWeWereHere.jpg" class="d-block w-100" alt="duo pic namin sa harap ng museum" title="duo pic namin sa harap ng museum">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/pots.jpg" class="d-block w-100" alt="Us checking out pots" title="Us checking out pots">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/MuslimSection.jpg" class="d-block w-100" alt="Forgot which section of the museum was this" title="Forgot which section of the museum was this">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/weMadeABird_idk.jpg" class="d-block w-100" alt="symmetrical pose" title="symmetrical pose">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/ElevatorPic_whyNot.jpg" class="d-block w-100" alt="picture sa elevator against the light" title="picture sa elevator against the light">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/coolCeiling_1.jpg" class="d-block w-100" alt="under museum of natural history" title="under museum of natural history">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/coolCeiling_2.jpg" class="d-block w-100" alt="under museum of natural history 2" title="under museum of natural history 2">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/AgainstTheLight_sana.jpg" class="d-block w-100" alt="two of us and one visible butterfly" title="two of us and one visible butterfly">
-                                            </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#nationalMuseumMoments_duo" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                                <p class="entryParagraphHead"> <b> Ang favorite kong kasama </b> </p>
-                                <p class="entryParagraph"> As promised, eto yung mga pics na magkasama tayo. Thank you for making the trip many times better than it should be. Thank you for being someone 
-                                    I can talk to while pondering over the things at the museum.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_2">
-                                <img id="entryImg" src="pics/SoloPic_7.jpg" alt="merienda sa foodcourt" title="merienda sa foodcourt">
-                                <p class="entryParagraphHead"> <b> POV: What the other person sees when eating with you pt. IV </b> </p>
-                                <p class="entryParagraph"> SM North foodcourt potato corner is a disappointment. Also ka-stress ka, iniiwan mo lang bag mo sa 
-                                    public area. May laman pang laptop.
-                                </p>
-                            </div>
-                            <div class="entry" id="entry_3">
-                                <div class="d-flex align-items-center" id="goodwillMoments_container_2">
-                                    <div id="roseColored" class="carousel slide" data-bs-interval="false" align="center">
-                                        <div class="carousel-indicators">
-                                            <button type="button" data-bs-target="#roseColored" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-                                            <button type="button" data-bs-target="#roseColored" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                                        </div>
-                                        <div class="carousel-inner">
-                                            <div class="carousel-item active">
-                                                <img src="pics/switchedToToteBag_1.jpg" class="d-block w-100" alt="a solution to back pain" title="a solution to back pain">
-                                            </div>
-                                            <div class="carousel-item">
-                                                <img src="pics/switchedToToteBag_2.jpg" class="d-block w-100" alt="a solution to back pain 2" title="a solution to back pain 2">
-                                            </div>
-                                        </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#roseColored" data-bs-slide="prev">
-                                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Previous</span>
-                                        </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#roseColored" data-bs-slide="next">
-                                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                            <span class="visually-hidden">Next</span>
-                                        </button>
-                                    </div>
-                                </div>
-                            <p class="entryParagraphHead"> <b> A solution to back pain </b> </p>
-                            <p class="entryParagraph"> Hope you get to fix your shoulder and back issues. I'm just relieved you're not ignoring it anymore. Hopefully you don't have to bring your laptop 
-                                everyday.
-                            </p>
-                            </div>
-                            <div class="entry" id="entry_1">
-                                <img id="entryImg" src="pics/AfterLumabasNgFair.jpg" alt="a disappointed look" title="a disappointed look">
-                                <p class="entryParagraphHead"> <b> Naluging palaka </b> </p>
-                                <p class="entryParagraph"> Hey at least you got to hang out with Troy kahit wala kayo masyadong nagawa sa SHS fair. </p>
-                            </div>
-                            <div class="entry" id="entry_3">
+						</div>
+						<div class="col-3"><!--column 4-->
+							<div class="entry" id="entry_3">
                                 <img id="entryImg" src="pics/MadCafe.jpg" alt="mga order natin" title="mga order natin">
                                 <p class="entryParagraphHead"> <b> MadCafe Cubao </b> </p>
                                 <p class="entryParagraph"> One of the most memorable evenings we spent together. Muntik na tayo masarahan ng tren HAHAHA.
@@ -680,34 +744,36 @@
                                                 <img src="pics/candidhehehe.jpg" class="d-block w-100" alt="yehey I did it" title="yehey I did it">
                                             </div>
                                         </div>
-                                            <button class="carousel-control-prev" type="button" data-bs-target="#recentJeep" data-bs-slide="prev">
+                                        <button class="carousel-control-prev" type="button" data-bs-target="#recentJeep" data-bs-slide="prev">
                                             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Previous</span>
                                         </button>
-                                            <button class="carousel-control-next" type="button" data-bs-target="#recentJeep" data-bs-slide="next">
+                                        <button class="carousel-control-next" type="button" data-bs-target="#recentJeep" data-bs-slide="next">
                                             <span class="carousel-control-next-icon" aria-hidden="true"></span>
                                             <span class="visually-hidden">Next</span>
                                         </button>
                                     </div>
                                 </div>
-                            <p class="entryParagraphHead"> <b> Tandang Sora jeep </b> </p>
-                            <p class="entryParagraph"> Cute natin <3
-                            </p>
+								<p class="entryParagraphHead"> <b> Tandang Sora jeep </b> </p>
+								<p class="entryParagraph"> Cute natin <3 </p>
                             </div>
-                        </div>
-                    </div> 
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!--Modal template-->
+
+        <div class="modal fade" id="passHere" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl">
+                <div class="modal-content" id="modalDialog">
+                    
                 </div>
             </div>
+        </div>
+
+        <script src="app.js">
             
-            <div class="ateneoFirstSem">
-                <p id="timelineTitle"> 2022 First Semester </p>
-            </div>
-            <div class="nextYear2023">
-                <p id="timelineTitle"> 2023 Second Semester </p>
-            </div>
-            <div class="intersessionToPresent">
-                <p id="timelineTitle"> 2023 up until today </p>
-            </div>
-        
+        </script>
     </body>
 </html>
