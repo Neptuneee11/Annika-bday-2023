@@ -82,6 +82,30 @@ function passToModal(idPassed) {
     }
 }
 
+window.onscroll = function(){
+    var scroll = window.scrollY;
+    console.log(scroll);
+    if (scroll < 1500) {
+        // green
+        document.body.style.backgroundColor = 'yellow';
+    } else if (scroll >= 1500 && scroll < 5000) {
+        // yellow
+        document.body.style.backgroundColor = 'green';
+    } else if (scroll >= 5000 && scroll < 7500) {
+        // blue
+        document.body.style.backgroundColor = 'blue';
+    } else if (scroll >= 7500 && scroll < 10000) {
+        // orange
+        document.body.style.backgroundColor = 'pink';
+    } else if (scroll >= 10000 && scroll < 14000) {
+        // orange
+        document.body.style.backgroundColor = 'violet';
+    } else {
+        // purple
+        document.body.style.backgroundColor = 'black';
+    }
+}
+
 const balloonContainer = document.getElementById("balloon-container");
 
 function random(num) {
