@@ -1,8 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap'); /*you need internet*/
 
 body{
     background-color: beige;
+    background-image: url("designAssets/yellowPattern.png");
     transition: background 1s ease;
+}
+
+div#forBG{
+    
+    opacity: 0.5;
+    z-index: 2;
 }
 
 div.titleContainer{
@@ -11,6 +18,8 @@ div.titleContainer{
     text-align: center;
     height: 100vh;
     margin: 0;
+
+    
 }
 
 div.HBD{
@@ -25,6 +34,8 @@ div.timelineTitle{
     margin-right: 25%;
     margin-top: 20px;
     padding: 35px;
+    border-style: solid;
+    border-width: 17px;
 }
 div.timelineTitle > div{
     border-style: solid;
@@ -42,13 +53,40 @@ div.container{
 	max-width: 1400px;
 	margin: auto;
     padding: 20px;
+
+    border-style: solid;
+    border-width: 5px;
     
 }
 
-div.entry_1, div.entry_2, div.entry_3, div.entry_4{
+div.entry{
+    border-radius: 15px;
     margin-bottom: 15px;
     padding: 20px;
     display: block;
+
+    border-style: solid;
+    border-width: 2px;
+
+    transition: 0.2s;
+}
+
+div.entry:hover{
+    filter: brightness(110%);
+    transform: scale(105%);
+
+    transition: 0.2s;
+}
+
+div.entry:active{
+    filter: brightness(130%);
+    transform: scale(102%);
+    
+    transition: 0s;
+}
+
+img{
+    border-radius: 20px;
 }
 
 div.entry_1{
@@ -71,25 +109,37 @@ div.entry_4{
     background-color: #FEF2F4;
 }
 
-img#entryImg{
+div#showcase > div.carousel{
     width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+img#entryImg{
+    max-width: 100%;
     height: auto;
     position: relative;
     margin-bottom: 12px;
+    display: flex;
 }
 
 div#goodwillMoments_container{
     background-color: black;
     height: 400px;
-    width: 100%;
+    width: auto;
     margin-bottom: 12px;
+
+    border-radius: 20px;
 }
+
 
 div#goodwillMoments_container_2{
     background-color: black;
     height: 250px;
-    width: 100%;
+    width: auto;
     margin-bottom: 12px;
+
+    border-radius: 20px;
 }
 
 p.entryParagraph{
@@ -126,12 +176,30 @@ div.toTheDarkDepths{
     padding: 20px;
     height: 15000px;
     background-image: linear-gradient(180deg, rgb(248, 185, 215), rgb(146, 0, 231), rgb(21, 0, 80),black);
+
+    border-style: solid;
+    border-width: 5px;
+    border-color: rgb(0, 1, 37);
+
+    border-top: 0;
 }
 
 div#a_bit_under{
     background-color: none;
     position: relative;
     top:10000px;
+}
+
+div.transitionTime{
+    position: relative;
+    top:30%;
+    left:50%;
+    transform: translate(-50%,0);
+    background-color: rgb(72, 2, 129);
+    max-width: 70%;
+    padding: 12px;
+
+    transition: 2s ease;
 }
 
 div.entrySecret{
@@ -199,3 +267,11 @@ div.entrySecret > p{
     to {transform: translateY(-300vh);
     opacity: 0;}
   }
+
+/* modal dialog ============================================================*/
+
+div.modal-content{
+    padding: 40px;
+}
+
+

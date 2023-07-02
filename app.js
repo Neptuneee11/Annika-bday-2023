@@ -1,20 +1,7 @@
-const picNames = ['pics\\TapatNgPisayFSR_1.jpg', 'pics\\TapatNgPisayFSR_2.jpg', 'pics\\SoloPic_1.jpg', 'pics\\SoloPic_2.jpg', 'pics\\SoloPic_3.jpg', 'pics\\Goodwill_1.jpg', 
-'pics\\SoloPic_4.jpg', 'pics\\Gonz_1.jpg', 'pics\\I forgot saan to.jpg', 'pics\\sabaySaBiyahe.jpg', 'pics\\recweekSolo.jpg', 'pics\\BusyPoSiya.jpg', 
-'pics\\AceHardwareLightingTest.jpg', 'pics\\MatchyKamiLmao.jpg', 'pics\\Songerist.jpg', 'pics\\AfterKaraoke.jpg', 'pics\\dinner_1.jpg', 'pics\\SoloPic_5.jpg', 
-'pics\\NationalMuseum_1.jpg', 'pics\\NationalMuseum_solo.jpg', 'pics\\pots.jpg', 'pics\\AnnikaPondering_1.jpg', 'pics\\MuslimSection.jpg', 'pics\\IntoTheFishCatchers.jpg', 
-'pics\\weMadeABird_idk.jpg', 'pics\\ElevatorPic_whyNot.jpg', 'pics\\proofWeWereHere.jpg', 'pics\\SoloPic_6.jpg', 'pics\\siopao.jpg', 'pics\\AnotherMuseum_1.jpg', 
-'pics\\AnotherMuseum_2.jpg', 'pics\\coolCeiling_1.jpg', 'pics\\coolCeiling_2.jpg', 'pics\\AgainstTheLight_sana.jpg', 'pics\\SuitPaletteMatchesTheFloorAndFence_1.jpg', 
-'pics\\SuitPaletteMatchesTheFloorAndFence_2.jpg', 'pics\\SoloPeroHindi.jpg', 'pics\\byTheTent.jpg', 'pics\\AnnikaTheExplorer.jpg', 'pics\\ShawarmaSaRiverBanks.jpg', 
-'pics\\RiverBanks.jpg', 'pics\\CarnivalRide_1.jpg', 'pics\\CarnivalRide_2.jpg', 'pics\\MotionPic_1.jpg', 'pics\\MotionPic_2.jpg', 'pics\\NakulongKami_1.jpg', 
-'pics\\NakulongKami_2.jpg', 'pics\\RedShirt.jpg', 'pics\\SoloPic_7.jpg', 'pics\\SoloPic_8.jpg', 'pics\\MovieNight.jpg', 'pics\\switchedToToteBag_1.jpg', 
-'pics\\switchedToToteBag_2.jpg', 'pics\\MagkatabiSaHarap.jpg', 'pics\\GoodwillSelfie.jpg', 'pics\\GoodwillChill.jpg', 'pics\\AfterLumabasNgFair.jpg', 'pics\\LyingOnGrass.jpg', 
-'pics\\HinatakAkoSaSM.jpg', 'pics\\ThereWasAnAttemptMagCandid.jpg', 'pics\\SoloPic_9.jpg', 'pics\\MadCafe.jpg', 'pics\\SoloPic_10.jpg', 'pics\\UpperBunk_1.jpg', 
-'pics\\UpperBunk_2.jpg', 'pics\\UpperBunk_3.jpg', 'pics\\UpperBunk_4.jpg', 'pics\\secretFeetPix.jpg', 'pics\\Jeep.jpg', 'pics\\candidhehehe.jpg', 'pics\\after.jpg', 
-'pics\\leTransition.png', 'pics\\recweekDuo.jpg', 'pics\\NationalMuseum_1_copy.jpg']
-
 $(document).ready(function(){
     //generate a random ID for each entry
     giveID();
+    giveLinks();
     console.log("ready");
     $("#passHere").on('hide.bs.modal', function(){
         $("#modalDialog").empty()
@@ -23,8 +10,21 @@ $(document).ready(function(){
 
 function giveID(){
     console.log("eyyyyy")
+    var choosePalette = [["#FFF36e","#fff36e","#fff36e","#fff36e"], //yellow
+                         ["#1C6758","#3D8361","#D6CDA4","#EEF2E6"], //green
+                         ["#0B2447","#19376D","#576CBC","#A5D7E8"], //blue
+                         ["#D14D72","#FFABAB","#FCC8D1","#FEF2F4"], //pink
+                         ["#807c97","#807c97","#807c97","#807c97"] //grey
+                        ]
+    var fontColor = [["black","black","black","black"], //yellow
+                     ["white","white","black","black"], //green
+                     ["white","white","white","black"], //blue
+                     ["white","black","black","black"], //pink
+                     ["white","white","white","white"] //grey
+                ]
+
+
     let rows = document.getElementsByName("color")
-    console.log(rows)
 
     for (var i=0; i<rows.length; i++){
         columns = rows[i].children;
@@ -33,12 +33,28 @@ function giveID(){
             entries = columns[j].children;
 
             for(var k=0; k<entries.length; k++){
-                entries[k].id = "pictureCaption_"+i.toString()+"_"+j.toString()+"_"+k.toString();
-                entries[k].setAttribute("name", "entry");
-                var chooseHere = ["entry_1","entry_2","entry_3","entry_4"]
-                entries[k].setAttribute("class", chooseHere[getRandomInt(4)]);
+                let newID = "pictureCaption_"+i.toString()+"_"+j.toString()+"_"+k.toString();
+                entries[k].children[0].id = newID;
+                entries[k].setAttribute("onclick", "passHere('"+ newID +"')");
+                entries[k].children[0].setAttribute("class", "entry");
+
+                var randy = Math.floor(Math.random() * 4);
+
+                entries[k].children[0].style.backgroundColor = choosePalette[i][randy];
+                entries[k].getElementsByClassName("entryParagraphHead")[0].style.color = fontColor[i][randy];
+                entries[k].getElementsByClassName("entryParagraph")[0].style.color = fontColor[i][randy];
             }
         }
+    }
+}
+
+function giveLinks(){
+    let entries = document.getElementsByClassName("fillDiv");
+
+    for (var i=0; i<entries.length; i++){
+        let entryDiv = entries[i].children[0];
+
+        entries[i].setAttribute("onclick", "passToModal('"+entryDiv.id+"')");
     }
 }
 
@@ -49,7 +65,10 @@ function getRandomInt(max) {
 function passToModal(idPassed) {
     let inp = document.getElementById(idPassed).innerHTML;
     document.getElementById("modalDialog").innerHTML += inp;
+    //make modal match
+    let bgC = document.getElementById(idPassed).getAttribute("style");
 
+    document.getElementById("modalDialog").setAttribute("style",bgC);
     //check for carousels
     let divContainer = document.getElementById("modalDialog").children;
 
@@ -57,6 +76,10 @@ function passToModal(idPassed) {
 
     if(divContainer[0].id==="goodwillMoments_container" || divContainer[0].id==="goodwillMoments_container_2"){
         console.log("is a carousel")
+        //change id
+        //divContainer[0].className = "d-block";
+        divContainer[0].id = "";
+
         //search deeper
         divCarousel = divContainer[0].children;
 
@@ -78,33 +101,51 @@ function passToModal(idPassed) {
             divGrandChild[i].setAttribute("data-bs-target", "#showcase")
             divGrandChild[i].setAttribute("data-bs-slide-to", i.toString())
         }
+
+        //set the classes of the pictures
+        carouselItems = divChild[1].children
+        
+        //change class of images
+        for (var j=0; j<carouselItems.length; j++){
+            carouselItems[j].children[0].setAttribute("class","img-fluid")
+        }
         
     }
 }
 
-window.onscroll = function(){
-    var scroll = window.scrollY;
-    console.log(scroll);
-    if (scroll < 1500) {
-        // green
-        document.body.style.backgroundColor = 'yellow';
-    } else if (scroll >= 1500 && scroll < 5000) {
-        // yellow
-        document.body.style.backgroundColor = 'green';
-    } else if (scroll >= 5000 && scroll < 7500) {
-        // blue
-        document.body.style.backgroundColor = 'blue';
-    } else if (scroll >= 7500 && scroll < 10000) {
-        // orange
-        document.body.style.backgroundColor = 'pink';
-    } else if (scroll >= 10000 && scroll < 14000) {
-        // orange
-        document.body.style.backgroundColor = 'violet';
+window.onscroll = function(){//changing background white scrolling
+    var scroll = window.scrollY / document.body.scrollHeight; //make it a percentage
+
+    if (scroll < 0.074) {
+
+        document.body.style.backgroundColor = '#fffaa5ff';
+        document.body.style.backgroundImage = 'url("designAssets/yellowPattern.png")';
+    } else if (scroll >= 0.074 && scroll < 0.19) {
+
+        document.body.style.backgroundColor = '#003928ff';
+        document.body.style.backgroundImage = 'url("designAssets/greenPattern.png")';
+    } else if (scroll >= 0.19 && scroll < 0.29) {
+
+        document.body.style.backgroundColor = '#000139ff';
+        document.body.style.backgroundImage = 'url("designAssets/bluePattern.png")';
+    } else if (scroll >= 0.29 && scroll < 0.55) {
+
+        document.body.style.backgroundColor = '#ff8bd2ff';
+        document.body.style.backgroundImage = 'url("designAssets/pinkPattern.png")';
+        document.getElementById("changing").children[0].src = "pics/leTransition.png";
+    } else if (scroll >= 0.55 && scroll < 0.77) {
+
+        document.body.style.backgroundColor = '#6600acff';
+        document.body.style.backgroundImage = 'url("")';
+        document.getElementById("changing").children[0].src = "pics/after.jpg";
     } else {
-        // purple
+
         document.body.style.backgroundColor = 'black';
+        document.body.style.backgroundImage = 'url("")';
     }
 }
+
+/* copy pasted. Dunno how this works */
 
 const balloonContainer = document.getElementById("balloon-container");
 

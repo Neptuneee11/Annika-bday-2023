@@ -5,18 +5,27 @@ div.entry_1, div.entry_2, div.entry_3{
 
 div.entry_1{
     background-color: #D14D72;
+    background-color: #fff36e;
+    background-color: #1C6758;
 }
 
 div.entry_2{
     background-color: #FFABAB;
+    background-color: #fff36e;
+    background-color: #3D8361;
 }
 
 div.entry_3{
     background-color: #FCC8D1; 
+    background-color: #fff36e;
+    background-color: #cabb78;
 }
 
 div.entry_4{
     background-color: #FEF2F4;
+    background-color: #fff36e;
+    background-color: #EEF2E6;
+    background-color: #807c97;
 }
 
 div.modal-content{
@@ -24,7 +33,7 @@ div.modal-content{
 }
 
 img{
-    width: 100%;
+    width: 50%;
     height: auto;
     border-radius: 15px;
 }
@@ -36,8 +45,9 @@ p.entryParagraph{
 
 a.fillDiv{
     text-decoration: none;
-    color: rgb(248, 185, 215);
+    color: rgb(152, 88, 0);
     color: black;
+
 }
 
 div.toTheDarkDepths{
