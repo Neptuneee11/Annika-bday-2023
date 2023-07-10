@@ -64,7 +64,7 @@ function getRandomInt(max) {
 
 function passToModal(idPassed) {
     let inp = document.getElementById(idPassed).innerHTML;
-    document.getElementById("modalDialog").innerHTML += inp;
+    document.getElementById("modalDialog").innerHTML += (inp + '<button type="button" class="btn btn-secondary col-4" data-bs-dismiss="modal">Close</button>');
     //make modal match
     let bgC = document.getElementById(idPassed).getAttribute("style");
 
@@ -78,7 +78,7 @@ function passToModal(idPassed) {
         console.log("is a carousel")
         //change id
         //divContainer[0].className = "d-block";
-        divContainer[0].id = "";
+        divContainer[0].id = "carouselShowcase";
 
         //search deeper
         divCarousel = divContainer[0].children;
@@ -115,6 +115,8 @@ function passToModal(idPassed) {
 
 window.onscroll = function(){//changing background white scrolling
     var scroll = window.scrollY / document.body.scrollHeight; //make it a percentage
+
+    console.log(scroll);
 
     if (scroll < 0.074) {
 

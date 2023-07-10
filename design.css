@@ -43,7 +43,7 @@ div.timelineTitle > div{
     border-color: rgb(255, 255, 255);
 }
 p.timelineTitle{
-    font-size: 34pt;
+    font-size: min(5vw,40pt); 
     text-align: center;
     font-family: Garamond;
 }
@@ -115,8 +115,15 @@ div#showcase > div.carousel{
     margin: 0;
 }
 
+div#carouselShowcase{
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
 img#entryImg{
-    max-width: 100%;
+    width: 100%;
     height: auto;
     position: relative;
     margin-bottom: 12px;
@@ -125,7 +132,7 @@ img#entryImg{
 
 div#goodwillMoments_container{
     background-color: black;
-    height: 400px;
+    height: 50%;
     width: auto;
     margin-bottom: 12px;
 
@@ -135,7 +142,7 @@ div#goodwillMoments_container{
 
 div#goodwillMoments_container_2{
     background-color: black;
-    height: 250px;
+    height: 50%;
     width: auto;
     margin-bottom: 12px;
 
@@ -148,7 +155,7 @@ p.entryParagraph{
 }
 
 p#HBD{
-    font-size: 90pt;
+    font-size: 8vw;
     color: white;
     font-family: 'Merriweather Sans', sans-serif;
 }
@@ -159,8 +166,10 @@ p#scrollDown{
 }
 
 div.scrollDown{
-    position: relative;
-    top: 150px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%,0);
+    bottom: -5%;
 }
 
 a.fillDiv{
@@ -274,4 +283,14 @@ div.modal-content{
     padding: 40px;
 }
 
+.btn-secondary{
+    --bs-btn-color: #fff;
+    --bs-btn-bg: #00000038;
+    --bs-btn-border-color: #6c757d;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #3c444da6;
+    --bs-btn-hover-border-color: #cde9ff66;
+
+    left:50%
+}
 
